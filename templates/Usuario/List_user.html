@@ -1,0 +1,20 @@
+{% extends 'Gatos/base.html' %} 
+{% load static%}
+{% block titulo_principal %}  {% endblock %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
+{% block content %}
+   {% if object_list %}
+        {% for user in object_list %}
+            <p>Nombre: {{ user.username }}</p>
+            <p>email: {{ user.email }}</p>      
+
+            <br>
+        {% endfor %}
+        
+        {% else %}
+        <h1>No hay registros de user</h1>
+        {% endif %}
+
+{% endblock %}
