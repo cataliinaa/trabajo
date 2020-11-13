@@ -1,0 +1,97 @@
+{% extends 'Gatos/base.html' %}
+{% comment %} {% endcomment %}
+{% load static%}
+{% block title %}{% endblock title %}
+
+
+<link rel="icon" href="{% static 'css/img/fotos_gatos' %}">
+
+
+
+{% block content %}
+
+
+<img src="{% static 'img/fotos_gatos/portada.jpg' %}" id="img_fondo" class="img-fluid mx-auto d-block" alt="" >
+
+<div class="row principal">
+    <div class="col-xs-12 col-lg-4 col-lg-12">
+        <div class="sidebar1 content-center">
+            <i class="fas fa-heart"></i>
+            <h3 class="tituloindex">Nuestra Misión</h3>
+            <div class="contenido content-center">
+                <h2 class="tituloindex"> Rescatar, rehabilitar y
+                    reubicar felinos que esten en peligo,
+                    situacion de calle y maltratados, para
+                    darles una segunda oportunidad.</h2>
+            </div>
+        </div>
+        <div class="contenido content-center ">
+            <i class="fas fa-paper-plane"></i>
+            <h3 class="tituloindex">visión</h3>
+            <div class="content-center">
+                <h2 class="tituloindex">Promover la tenencia responsable
+                    de animales mediante la esterilizacion,
+                    adopción de animales ademas de erradicar el maltrato
+                    y abandono de felinos</h2>
+            </div>
+        </div>
+        <div class="sidebar2 content-center ">
+            <i class="fas fa-star"></i>
+            <h3 class="tituloindex">Valores</h3>
+            <div class="content-center">
+                <h2 class="tituloindex"> El amor por los animales, justicia, adopciones
+                    responsables,respeto hacia ellos y empatia</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="galeria">
+            <h1>Nuestros rescatados</h1>
+            <div class="linea"></div>
+            <div class="contenedor-imagenes">
+                <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/g10.jpg' %}" alt="">
+                    <div class="overlay">
+                        <h2>Baltazar</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/n2.jpg' %}" alt="">
+                    <div class="overlay">
+                        <h2>gabo y jaime</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/n7.jpg' %}" alt="">
+                    <div class="overlay">
+                        <h2>jose</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/1.jpg' %}" alt="">
+                    <div class="overlay">
+                        <h2>pelongi</h2>
+                    </div>
+                </div>
+                 <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/ziro.jpg' %}" alt="">
+                    <div class="overlay">
+                        <h2>ziroh</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src=" {% static 'img/fotos_gatos/gatoeksdi.png' %}" alt="">
+                    <div class="overlay">
+                        <h2>arabian</h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        {% endblock content %}
