@@ -1,0 +1,23 @@
+{% extends 'Gatos/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<body>
+    <nav>
+        <div class=container >
+            <h1>Editor de gatos</h1> 
+        </div>
+           
+    </nav>
+    
+    
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Editar</button>
+    </form>
+
+</body>
+{% endblock %}

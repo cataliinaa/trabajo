@@ -1,0 +1,14 @@
+{% extends 'Gatos/base.html' %}
+
+{% load static %}
+
+{% block title %}<h1>Buscar Gatos</h1>{% endblock title %}
+
+{% block content %} 
+<h1>ingrese raza</h1>
+
+<form action="{% url 'search/' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+</form>
+
+{% endblock content %}
