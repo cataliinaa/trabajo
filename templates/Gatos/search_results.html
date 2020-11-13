@@ -1,0 +1,16 @@
+{% extends 'Gatos/base.html' %}
+
+{% load static %}
+
+{% block title %}<h1>Search Results</h1>{% endblock title %}
+
+{% block content %} 
+<ul>
+  {% for c in object_list %}
+    <li>
+         {{ c.nombre }},{{ c.fecha_encontrado }},{{ c.edad }}, {{c.raza}}
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}

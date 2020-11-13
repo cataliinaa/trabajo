@@ -1,0 +1,36 @@
+{%extends "Gatos/base.html" %}
+{% load static %} 
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen,projection"/>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
+
+{% block content %} {% if gatos %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>foto</th>
+            <th>Nombre</th>
+            <th>edad</th>
+            <th>fecha_encontrado</th>
+            <th>raza</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in gatos %}
+        <tr>
+            <td><img src= ../../static/img/fotos_gatos/{{ c.foto }} style="width: 100px;"/> </td>
+            <th>{{ c.nombre }}</th>
+            <td>{{ c.edad}}</td>
+            <td>${{ c.fecha_encontrado }}</td>
+            <td>${{ c.raza }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+    <h1>No hay registros de gatos</h1>
+{% endif %} {% endblock %}
